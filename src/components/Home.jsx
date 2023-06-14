@@ -9,15 +9,12 @@ const Home = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems='center'
-
+                textAlign='center'
             >
-                <Grid
-                    item
+                <Box
                     color="white"
                     py="3rem"
                     margin="2rem"
-                    textAlign="center"
-                    
                 >
 
                     <img
@@ -28,21 +25,31 @@ const Home = () => {
                         }}
                     />
 
-                    <Typography paragraph fontFamily="monospace" fontSize={20} minHeight="250px">
-                        <Typewriter
-                            onInit={(typewriter) => {
-                                typewriter.typeString("<strong>Namaste!</strong>...<br/>")
-                                    .pauseFor(500).changeDelay(60)
-                                    .typeString("I'm <span style='color: #66ffcc;'><strong>Ashwin Koli</strong></span>,<br/>")
-                                    .pauseFor(500).changeDelay(40)
-                                    .typeString("I've recently completed my <span style='color: #66ffcc;'><strong>MCA</strong></span> Degree and want to become a professional <span style='color: #66ffcc;'><strong>Developer</strong></span>.")
-                                    .pauseFor(1000)
-                                    .start();
-                            }}
-                        />
-                    </Typography>
+                    <Grid 
+                        container 
+                        spacing={1} 
+                        // direction="column"
+                        alignContent="center"
+                        justifyContent="center"
+                    >
+                        <Grid item sm={10} md={6} lg={6}>
+                            <Typography paragraph fontFamily="monospace" fontSize={20} minHeight="250px">
+                                <Typewriter
+                                    onInit={(typewriter) => {
+                                        typewriter.typeString("<strong>Namaste!</strong>...<br/>")
+                                            .pauseFor(500).changeDelay(40)
+                                            .typeString("I'm <span style='color: #66ffcc;'><strong>Ashwin Koli</strong></span>,<br/>")
+                                            .pauseFor(500).changeDelay(20)
+                                            .typeString("I've recently completed my <span style='color: #66ffcc;'><strong>MCA</strong></span> Degree and want to become a professional <span style='color: #66ffcc;'><strong>Developer</strong></span>.")
+                                            .pauseFor(1000)
+                                            .start();
+                                    }}
+                                />
+                            </Typography>
+                        </Grid>
+                    </Grid>
 
-                </Grid>
+                </Box>
             </Box>
         </>
     );
