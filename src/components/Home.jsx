@@ -10,6 +10,7 @@ const Home = () => {
                 justifyContent="center"
                 alignItems='center'
                 textAlign='center'
+                py={2} my={3}
             >
                 <Box
                     color="white"
@@ -59,9 +60,10 @@ const styles = {
     bgimg: {
         display: "flex",
         flex: 1,
-        backgroundImage: "url('https://wallpaperaccess.com/full/5651988.jpg')",
+        backgroundImage: "url('https://wallpapercave.com/wp/wp2936914.jpg')",
         backgroundSize: "cover",
-        opacity: 0.9,
+        backgroundOrigin:"content-box",
+        opacity: 1,
     },
     avatar: {
         display: 'flex',
