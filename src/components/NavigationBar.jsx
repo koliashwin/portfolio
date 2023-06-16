@@ -3,7 +3,7 @@ import { AppBar, Box, Button, Divider, Drawer, IconButton, Link, List, ListItem,
 import { MenuBook } from "@mui/icons-material";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Skills", "Projects", "About", "Contact"]
+const navItems = ["Home", "Skills", "Work", "About", "Contact"]
 
 const NavigationBar = (props) => {
     const { window } = props;
