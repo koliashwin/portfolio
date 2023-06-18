@@ -16,7 +16,7 @@ const SkillCard = (props) => {
             />
             <Box sx={{ display: "flex" }}>
                 <CardContent>
-                    <Typography>{props.name}</Typography>
+                    <Typography fontFamily={"cursive"} ><strong>{props.name}</strong></Typography>
                 </CardContent>
             </Box>
         </Card>
@@ -28,12 +28,12 @@ const Skills = () => {
             <Box>
                 <Box py={2} mx={2} >
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}>My Skills</Typography>
+                        <Typography variant="h3" mb={2}  fontFamily={"cursive"}>My Skills</Typography>
                     </Divider>
                     <Grid container spacing={2} >
                         {MyData.MySkills.map((skill, i) => {
                             return (
-                                <Grid item xs={6} sm={6} md={3} px={1.5} >
+                                <Grid item xs={6} sm={6} md={3} >
                                     <Box justifyContent={"center"}>
                                         <SkillCard name={skill.name} id={skill.id} icon={skill.icon} />
                                     </Box>

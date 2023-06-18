@@ -26,7 +26,7 @@ const ExpCard = () => {
 
                                 >
                                     <Box>
-                                        <Typography variant="h4">{work.position}</Typography>
+                                        <Typography variant="h4"  fontFamily={"cursive"}>{work.position}</Typography>
                                         <Typography variant="h6" display={"inline-flex"} >
                                             {work.type} at
                                             <Typography variant="h5" ml={1}>{work.company}</Typography>
@@ -111,7 +111,7 @@ const ProjectCard = () => {
                                     id={`project-accordion-${project.id}`}
                                 >
                                     <Box>
-                                        <Typography variant="h4">{project.name}</Typography>
+                                        <Typography variant="h4"  fontFamily={"cursive"}>{project.name}</Typography>
                                         <Typography variant="subtitle2">{project.type}</Typography>
                                     </Box>
                                 </AccordionSummary>
@@ -128,7 +128,7 @@ const ProjectCard = () => {
                                     </Grid>
 
                                     <Grid item md={6}>
-                                        <Grid container spacing={1} borderBottom={1}>
+                                        <Grid container spacing={1}>
 
 
 
@@ -167,9 +167,9 @@ const ProjectCard = () => {
                                             </Grid>
 
                                             <Grid item my={"auto"} xs={4} sm={2}>
-                                                <Typography >Contributors : </Typography>
+                                                <Typography >Team : </Typography>
                                             </Grid>
-                                            <Grid item xs={8} sm={5} >
+                                            <Grid item xs={8} sm={10} borderBottom={1}>
                                                 {project.contributors.map((person) => {
                                                     return (
                                                         <>
@@ -184,7 +184,7 @@ const ProjectCard = () => {
                                                 })}
                                             </Grid>
 
-                                            <Grid item xs={12} sm={5} >
+                                            <Grid item >
                                                 <Box component="div" display={"flex"}>
                                                     <Box display={(project.sourcecode) ? "flex" : "none"}>
                                                         <Button variant="contained" href={project.sourcecode} sx={{ mx: 2 }}>Source</Button>
@@ -219,7 +219,7 @@ const Work = () => {
             <Box py={2} my={2}>
                 <Box>
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}>Experience</Typography>
+                        <Typography variant="h3" mb={2}  fontFamily={"cursive"}>Experience</Typography>
                     </Divider>
                     <Box display={"flow"} m={2}>
                         <ExpCard />
@@ -227,7 +227,7 @@ const Work = () => {
                 </Box>
                 <Box>
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}>Projects</Typography>
+                        <Typography variant="h3" mb={2}  fontFamily={"cursive"}>Projects</Typography>
                     </Divider>
                     <Box display={"flow"} m={2}>
                         <ProjectCard />
