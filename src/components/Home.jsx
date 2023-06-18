@@ -1,21 +1,25 @@
-import { Box, Container, Divider, Grid, Paper, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Paper, ThemeProvider, Typography } from "@mui/material";
 import React from "react";
 import Typewriter from 'typewriter-effect';
+import { MyOuterTheme } from "../assets/MyTheme";
 
 const Home = () => {
     return (
         <>
+            <ThemeProvider theme={MyOuterTheme}>
             <Box sx={styles.bgimg}
                 display="flex"
                 justifyContent="center"
                 alignItems='center'
                 textAlign='center'
-                py={2} my={3}
+                my={3}
+                
             >
                 <Box
                     color="white"
                     py="3rem"
                     margin="2rem"
+                    
                 >
 
                     <img
@@ -52,6 +56,7 @@ const Home = () => {
 
                 </Box>
             </Box>
+            </ThemeProvider>
         </>
     );
 }

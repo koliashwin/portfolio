@@ -1,3 +1,4 @@
+import { Box, Container } from "@mui/material"
 import DisplayScreen from "./components/DisplayScreen"
 
 function App() {
@@ -27,7 +28,10 @@ function App() {
     //   </p>
     // </>
     <>
+      <Box sx={{backgroundColor: "lavender"}}>
       <DisplayScreen />
+      </Box>
+      
     </>
   )
 }
