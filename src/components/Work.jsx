@@ -26,7 +26,7 @@ const ExpCard = () => {
 
                                 >
                                     <Box>
-                                        <Typography variant="h4"  fontFamily={"cursive"}>{work.position}</Typography>
+                                        <Typography variant="h4"  fontFamily={"initial"}>{work.position}</Typography>
                                         <Typography variant="h6" display={"inline-flex"} >
                                             {work.type} at
                                             <Typography variant="h5" ml={1}>{work.company}</Typography>
@@ -111,7 +111,7 @@ const ProjectCard = () => {
                                     id={`project-accordion-${project.id}`}
                                 >
                                     <Box>
-                                        <Typography variant="h4"  fontFamily={"cursive"}>{project.name}</Typography>
+                                        <Typography variant="h4"  fontFamily={"initial"}>{project.name}</Typography>
                                         <Typography variant="subtitle2">{project.type}</Typography>
                                     </Box>
                                 </AccordionSummary>
@@ -227,7 +227,7 @@ const Work = () => {
                 </Box>
                 <Box>
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}  fontFamily={"monospace"}>Projects</Typography>
+                        <Typography variant="h3" mb={2}  fontFamily={"cursive"} fontWeight={700}>Projects</Typography>
                     </Divider>
                     <Box display={"flow"} m={2}>
                         <ProjectCard />

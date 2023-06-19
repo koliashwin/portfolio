@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Box, Card, CardContent, CardHeader, CardMedia, Divider, Grid, ThemeProvider, Typography, textFieldClasses } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Divider, Grid, ThemeProvider, Typography } from "@mui/material";
 import MyData from "../database/MyData.json"
-import { Height } from "@mui/icons-material";
 import { MyOuterTheme } from "../assets/MyTheme";
 
 // console.log(MyData);
@@ -16,7 +15,7 @@ const SkillCard = (props) => {
             />
             <Box sx={{ display: "flex" }}>
                 <CardContent>
-                    <Typography fontFamily={"cursive"} ><strong>{props.name}</strong></Typography>
+                    <Typography fontFamily={"inherit"} ><strong>{props.name}</strong></Typography>
                 </CardContent>
             </Box>
         </Card>
@@ -28,7 +27,7 @@ const Skills = () => {
             <Box>
                 <Box py={2} mx={2} >
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}  fontFamily={"sans-serif"}>My Skills</Typography>
+                        <Typography variant="h3" mb={2}  fontFamily={"cursive"} fontWeight={700}>My Skills</Typography>
                     </Divider>
                     <Grid container spacing={2} >
                         {MyData.MySkills.map((skill, i) => {
