@@ -112,7 +112,7 @@ const About = () => {
     return (
         <ThemeProvider theme={MyOuterTheme}>
             <Divider component="div" role="presentation" textAlign="left">
-                <Typography variant="h3" mb={2}>About Me</Typography>
+                <Typography variant="h3" mb={2} fontFamily={"fantasy"}>About Me</Typography>
             </Divider>
             <TabContext value={value}>
                 <Box>

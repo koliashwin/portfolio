@@ -219,7 +219,7 @@ const Work = () => {
             <Box py={2} my={2}>
                 <Box>
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}  fontFamily={"cursive"}>Experience</Typography>
+                        <Typography variant="h3" mb={2}  fontFamily={"cursive"} fontWeight={700}>Experience</Typography>
                     </Divider>
                     <Box display={"flow"} m={2}>
                         <ExpCard />
@@ -227,7 +227,7 @@ const Work = () => {
                 </Box>
                 <Box>
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}  fontFamily={"cursive"}>Projects</Typography>
+                        <Typography variant="h3" mb={2}  fontFamily={"monospace"}>Projects</Typography>
                     </Divider>
                     <Box display={"flow"} m={2}>
                         <ProjectCard />

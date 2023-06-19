@@ -28,7 +28,7 @@ const Skills = () => {
             <Box>
                 <Box py={2} mx={2} >
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}  fontFamily={"cursive"}>My Skills</Typography>
+                        <Typography variant="h3" mb={2}  fontFamily={"sans-serif"}>My Skills</Typography>
                     </Divider>
                     <Grid container spacing={2} >
                         {MyData.MySkills.map((skill, i) => {
