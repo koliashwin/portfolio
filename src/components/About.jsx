@@ -48,7 +48,7 @@ const Intro = () => {
                     </Grid>
                     <Grid item xs={10} sm={8} display={"flex"} justifyContent={"center"}>
                         <Box >
-                            <Typography>this is about me sentence 1</Typography>
+                            <Typography>Hello there, My name is Ashwin Prakash Koli. I live in Mumbai. </Typography>
                             <Typography>this is about me another sentence 1 lets see how it looks, still not there</Typography>
                         </Box>
                     </Grid>
@@ -115,7 +115,7 @@ const Intrests = () => {
 
                             </Box>
                             <Box p={2}>
-                                <Typography fontFamily={"cursive"}>
+                                <Typography fontFamily={"monospace"} fontStyle={"oblique"}>
                                     "{quote}"
                                 </Typography>
                             </Box>
