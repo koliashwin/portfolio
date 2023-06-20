@@ -17,7 +17,7 @@ export const QuickOptions = () => {
         <ThemeProvider theme={MyOuterTheme}>
             <SpeedDial
                 ariaLabel="SpeedDial basic example"
-                sx={{ position: 'fixed', top: { lg: "50vh", sm: "48vh", xs: "43vh" }, left: "1vw" }}
+                sx={{ position: 'fixed', bottom:"1vh", left: "1vw" }}
                 icon={<SpeedDialIcon />}
                 FabProps={{ color: "secondary" }}
             >
