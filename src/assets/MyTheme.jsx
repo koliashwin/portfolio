@@ -8,7 +8,7 @@ export const MyOuterTheme = createTheme({
             dark: "#0025b3"
         },
         secondary:{
-            main: "#e0e338",
+            main: "#9f85f8",
         },
     }
 });

@@ -16,40 +16,17 @@ const Intro = () => {
                         </Box>
                     </Grid>
                     <Grid item sm={8} my={"auto"}>
-                        <Grid container spacing={1} my={"auto"}>
-                            <Grid item sm={6}>
-                                <Box display={"flex"} >
-                                    <Cake fontSize="large" />
-                                    <Typography my={"auto"} mx={1}>4-August-1999</Typography>
-                                </Box>
-                            </Grid>
-
-                            <Grid item sm={6}>
-                                <Box display={"flex"} >
-                                    <LocationOn fontSize="large" />
-                                    <Typography my={"auto"} mx={1}>Mumbai,Maharashtra,India</Typography>
-                                </Box>
-                            </Grid>
-
-                            <Grid item sm={6}>
-                                <Box display={"flex"} >
-                                    <LocationOn fontSize="large" />
-                                    <Typography my={"auto"} mx={1}>Mumbai,Maharashtra,India</Typography>
-                                </Box>
-                            </Grid>
-
-                            <Grid item sm={6}>
-                                <Box display={"flex"} >
-                                    <LocationOn fontSize="large" />
-                                    <Typography my={"auto"} mx={1}>Mumbai,Maharashtra,India</Typography>
-                                </Box>
-                            </Grid>
+                        <Grid container spacing={1} m={"auto"}>
+                            <Box >
+                                <Typography>Hello there, My name is Ashwin Prakash Koli. I live in Mumbai. </Typography>
+                                <Typography> little bit about myself goes here</Typography>
+                            </Box>
                         </Grid>
                     </Grid>
                     <Grid item xs={10} sm={8} display={"flex"} justifyContent={"center"}>
                         <Box >
-                            <Typography>Hello there, My name is Ashwin Prakash Koli. I live in Mumbai. </Typography>
-                            <Typography>this is about me another sentence 1 lets see how it looks, still not there</Typography>
+                            <Typography>here goes info about my work and Experience</Typography>
+                            <Typography>another paragraph</Typography>
                         </Box>
                     </Grid>
                 </Grid>
@@ -104,12 +81,12 @@ const Intrests = () => {
                 <Grid container spacing={3} display={"flex"} justifyContent={"center"} alignItems={"center"}>
                     <Grid item sm={6}>
 
-                        <Paper elevation={3} sx={{minHeight:{xs:"40vh" ,sm:"40vh", lg:"30vh"}}}>
+                        <Paper elevation={3} sx={{ minHeight: { xs: "40vh", sm: "40vh", lg: "30vh" } }}>
                             <Box borderBottom={1} display={"flex"}>
                                 <IconButton aria-label="Random Quote" onClick={() => {
                                     setQuote(Quotes[Math.floor(Math.random() * Quotes.length)])
                                 }}>
-                                    <LoopRounded fontSize="small"/>
+                                    <LoopRounded fontSize="small" />
                                 </IconButton>
                                 <Typography fontFamily={"monospace"} mx={1} pt={1} fontWeight={500} >Quotes/Philosophies I like :</Typography>
 
