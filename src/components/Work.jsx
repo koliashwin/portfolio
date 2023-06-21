@@ -3,6 +3,7 @@ import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Card, CardC
 import Mydata from "../database/MyData.json";
 import { Circle, DoubleArrow, ExpandMore, Group } from "@mui/icons-material";
 import { MyOuterTheme } from "../assets/MyTheme";
+import { motion } from "framer-motion";
 
 const ExpCard = () => {
     const [expanded, setExpanded] = useState(false);
@@ -14,7 +15,7 @@ const ExpCard = () => {
             {Mydata.WorkExperience.map((work) => {
                 return (
                     <>
-                        <Accordion
+                        <Accordion elevation={3}
                             sx={{ mb: 1, backgroundColor: "bisque" }}
                             expanded={expanded === `panel${work.id}`}
                             onChange={handleChange(`panel${work.id}`)}
@@ -26,7 +27,7 @@ const ExpCard = () => {
 
                                 >
                                     <Box>
-                                        <Typography variant="h4"  fontFamily={"initial"}>{work.position}</Typography>
+                                        <Typography variant="h4" fontFamily={"initial"}>{work.position}</Typography>
                                         <Typography variant="h6" display={"inline-flex"} >
                                             {work.type} at
                                             <Typography variant="h5" ml={1}>{work.company}</Typography>
@@ -100,7 +101,7 @@ const ProjectCard = () => {
             {Mydata.MyProjects.map(project => {
                 return (
                     <>
-                        <Accordion
+                        <Accordion elevation={4}
                             expanded={expanded === `panel${project.id}`}
                             onChange={handleChange(`panel${project.id}`)}
                             sx={{ m: 1, backgroundColor: "wheat" }}
@@ -111,7 +112,7 @@ const ProjectCard = () => {
                                     id={`project-accordion-${project.id}`}
                                 >
                                     <Box>
-                                        <Typography variant="h4"  fontFamily={"initial"}>{project.name}</Typography>
+                                        <Typography variant="h4" fontFamily={"initial"}>{project.name}</Typography>
                                         <Typography variant="subtitle2">{project.type}</Typography>
                                     </Box>
                                 </AccordionSummary>
@@ -132,7 +133,7 @@ const ProjectCard = () => {
 
 
 
-                                            <Grid item my={"auto"} xs={4} sm={2}>
+                                            <Grid item my={"auto"} xs={3} sm={2}>
                                                 <Typography>Project Deatils:</Typography>
                                             </Grid>
 
@@ -218,19 +219,63 @@ const Work = () => {
         <ThemeProvider theme={MyOuterTheme}>
             <Box py={2} my={2}>
                 <Box>
+                    {/* heading */}
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}  fontFamily={"cursive"} fontWeight={700}>Experience</Typography>
+                        {/* heading animation */}
+                        <motion.h3
+                            transition={{
+                                duration: 1,
+                                delay: 0.2
+                            }}
+                            whileInView={{
+                                opacity: [0, 1], x: [-100, 0]
+                            }}
+                        >
+                            <Typography variant="h3" mb={2} fontFamily={"cursive"} fontWeight={700}>Experience</Typography>
+                        </motion.h3>
                     </Divider>
+                    {/* Exprerience content */}
                     <Box display={"flow"} m={2}>
-                        <ExpCard />
+                        <motion.div
+                            transition={{
+                                duration: 1,
+                                delay: 0.2
+                            }}
+                            whileInView={{
+                                opacity: [0, 1], x: [100, 0]
+                            }}
+                        >
+                            <ExpCard />
+                        </motion.div>
                     </Box>
                 </Box>
                 <Box>
+                    {/* heading */}
                     <Divider component="div" role="presentation" textAlign="left">
-                        <Typography variant="h3" mb={2}  fontFamily={"cursive"} fontWeight={700}>Projects</Typography>
+                        <motion.h3
+                            transition={{
+                                duration: 1,
+                                delay: 0.2
+                            }}
+                            whileInView={{
+                                opacity: [0, 1], x: [-100, 0]
+                            }}
+                        >
+                            <Typography variant="h3" mb={2} fontFamily={"cursive"} fontWeight={700}>Projects</Typography>
+                        </motion.h3>
                     </Divider>
                     <Box display={"flow"} m={2}>
-                        <ProjectCard />
+                    <motion.div
+                            transition={{
+                                duration: 1,
+                                delay: 0.2
+                            }}
+                            whileInView={{
+                                opacity: [0, 1], y: [100, 0]
+                            }}
+                        >
+                            <ProjectCard />
+                        </motion.div>
                     </Box>
                 </Box>
             </Box>

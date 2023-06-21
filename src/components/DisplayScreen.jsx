@@ -7,7 +7,6 @@ import About from "./About";
 import Contact from "./Contact";
 import { QuickOptions } from "./QuickOptions";
 
-
 const DisplayScreen = () => {
     return (
         <>  
