@@ -28,10 +28,10 @@ function App() {
     //   </p>
     // </>
     <>
-      <Box sx={{backgroundColor: "lavender"}}>
-      <DisplayScreen />
+      <Box sx={{ backgroundColor: "lavender" }}>
+        <DisplayScreen />
       </Box>
-      
+
     </>
   )
 }
