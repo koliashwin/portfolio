@@ -34,7 +34,7 @@ const Skills = () => {
                                 delay: 0.2
                             }}
                             whileInView={{
-                                opacity:[0,1], x:[-100,0]
+                                opacity:[0,1], x:[100,0]
                             }}
                         >
                             <Typography variant="h3" mb={2} fontFamily={"cursive"} fontWeight={700}>My Skills</Typography>

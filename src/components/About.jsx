@@ -10,7 +10,7 @@ const Intro = () => {
     return (
         <>
             <Box>
-                <Grid container spacing={2} justifyContent={"center"}>
+                <Grid container spacing={2} justifyContent={"center"} >
                     <Grid item sm={4}>
                         <motion.div
                             initial={{
@@ -18,53 +18,56 @@ const Intro = () => {
                             }}
                             transition={{
                                 duration: 1,
-                                delay: 0.2
+                                delay: 0.2,
+                                ease: "easeInOut"
                             }}
                             whileInView={{
                                 opacity: [0, 1],
                                 rotateY: [0, 90, 0],
-                                x: [0, 100, 0]
+                                
                             }}
                         >
-                            <Box>
+                            <Box justifyContent={"center"} display={"flex"}>
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRKgUUpHpc-JwcJiRLScAepL-T3oeaxR8T5A&usqp=CAU" />
                             </Box>
                         </motion.div>
                     </Grid>
-                    <Grid item sm={8} my={"auto"}>
-                        <Grid container spacing={1} m={"auto"}>
+                    <Grid item sm={8} md={4} my={"auto"}>
+                        <Grid container spacing={1} m={"auto"} display={"flex"} justifyContent={"center"}>
                             <motion.div
                                 transition={{
                                     duration: 1,
                                     delay: 0.2
                                 }}
                                 whileInView={{
-                                    opacity: [0, 1], x: [100, 0]
+                                    opacity: [0, 1], y: [30, 0]
                                 }}
                             >
-                                <Box >
-                                    <Typography>Hello there, My name is Ashwin Prakash Koli. I live in Mumbai.</Typography>
-                                    <Typography> little bit about myself goes here</Typography>
-                                </Box>
+                                <Paper sx={{p:1}} >
+                                    
+                                    <Typography variant="h6" component="blockquote">Hello, My name is Ashwin Prakash Koli. This portfolio is a representation of what I've Learned and accomplished as a MCA Graduate.</Typography>
+                                    
+                                </Paper>
                             </motion.div>
                         </Grid>
                     </Grid>
-                    <Grid item xs={10} sm={8} display={"flex"} justifyContent={"center"}>
+                    {/* <Grid item xs={11} sm={8} md={4} m={"auto"} display={"flex"} justifyContent={"center"}>
                         <motion.div
                             transition={{
                                 duration: 1.2,
                                 delay: 0.4
                             }}
                             whileInView={{
-                                opacity: [0, 1], y: [50, 0]
+                                opacity: [0, 1], x: [50, 0],
+                                
                             }}
                         >
-                            <Box >
+                            <Paper sx={{p:1}} >
                                 <Typography>here goes info about my work and Experience</Typography>
                                 <Typography>another paragraph</Typography>
-                            </Box>
+                            </Paper>
                         </motion.div>
-                    </Grid>
+                    </Grid> */}
 
                 </Grid>
             </Box>
@@ -86,7 +89,7 @@ const Education = () => {
                                         delay: i * 0.2
                                     }}
                                     whileInView={{
-                                        opacity: [0, 1], x: [-100, 0]
+                                        opacity: [0, 1], x: [100, 0]
                                     }}
                                 >
                                     <Box >
@@ -200,7 +203,7 @@ const About = () => {
                         delay: 0.2
                     }}
                     whileInView={{
-                        opacity: [0, 1], x: [-100, 0]
+                        opacity: [0, 1], x: [100, 0]
                     }}
                 >
                     <Typography variant="h3" mb={2} fontFamily={"cursive"} fontWeight={700}>About Me</Typography>
@@ -215,6 +218,7 @@ const About = () => {
                         variant="scrollable"
                         scrollButtons="auto"
                         aria-label="About Section"
+                        sx={{ boxShadow: 3 }}
                     >
 
                         <Tab label="Introduction" value={"1"} />

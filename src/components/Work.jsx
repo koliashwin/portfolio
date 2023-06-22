@@ -119,7 +119,7 @@ const ProjectCard = () => {
                             </Box>
                             <AccordionDetails>
                                 <Grid container spacing={2}>
-                                    <Grid item sm={12} md={6}>
+                                    <Grid item sm={12} md={6} justifyContent={"center"} display={"flex"}>
                                         <CardMedia
                                             component="img"
                                             image={project.image}
@@ -228,7 +228,7 @@ const Work = () => {
                                 delay: 0.2
                             }}
                             whileInView={{
-                                opacity: [0, 1], x: [-100, 0]
+                                opacity: [0, 1], x: [100, 0]
                             }}
                         >
                             <Typography variant="h3" mb={2} fontFamily={"cursive"} fontWeight={700}>Experience</Typography>
@@ -242,10 +242,14 @@ const Work = () => {
                                 delay: 0.2
                             }}
                             whileInView={{
-                                opacity: [0, 1], x: [100, 0]
+                                opacity: [0, 1], y: [100, 0]
                             }}
                         >
-                            <ExpCard />
+                            <Grid container>
+                                <Grid item md={7}>
+                                    <ExpCard />
+                                </Grid>
+                            </Grid>
                         </motion.div>
                     </Box>
                 </Box>
@@ -258,7 +262,7 @@ const Work = () => {
                                 delay: 0.2
                             }}
                             whileInView={{
-                                opacity: [0, 1], x: [-100, 0]
+                                opacity: [0, 1], x: [100, 0]
                             }}
                         >
                             <Typography variant="h3" mb={2} fontFamily={"cursive"} fontWeight={700}>Projects</Typography>
@@ -274,7 +278,11 @@ const Work = () => {
                                 opacity: [0, 1], y: [100, 0]
                             }}
                         >
-                            <ProjectCard />
+                            <Grid container>
+                                <Grid item md={7}>
+                                    <ProjectCard />
+                                </Grid>
+                            </Grid>
                         </motion.div>
                     </Box>
                 </Box>
