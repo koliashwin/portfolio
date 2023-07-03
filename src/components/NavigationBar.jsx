@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AppBar, Box, Button, CssBaseline, Divider, Drawer, IconButton, Link, List, ListItem, ListItemButton, ListItemText, ThemeProvider, Toolbar, Typography } from "@mui/material";
-import { MenuBook } from "@mui/icons-material";
+import { Menu, MenuBook } from "@mui/icons-material";
 import { MyOuterTheme } from "../assets/MyTheme";
 
 const drawerWidth = 240;
@@ -47,7 +47,7 @@ const NavigationBar = (props) => {
                             sx={{ mr: 2 , display:{ md: "none"}}}
                             onClick={handleDrawerToggle}
                         >
-                            <MenuBook />
+                            <Menu />
                         </IconButton>
                         <Typography
                             variant="h6"

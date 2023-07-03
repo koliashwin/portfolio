@@ -39,7 +39,7 @@ const Home = () => {
                                     src="/images/Ashwin_photo.jpeg"
                                     style={{
                                         borderRadius: '20px',
-                                        height: "45vh",
+                                        height: "40vh",
                                     }}
                                 />
                             </Box>
@@ -82,7 +82,7 @@ const styles = {
         flex: 1,
         backgroundImage: "url('https://wallpapercave.com/wp/wp2936914.jpg')",
         backgroundSize: "auto",
-        backgroundOrigin: "content-box",
+        // backgroundOrigin: "content-box",
         opacity: 1,
     },
     avatar: {
