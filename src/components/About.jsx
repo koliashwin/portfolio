@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Avatar, Box, Divider, Grid, IconButton, List, ListItem, ListItemAvatar, ListItemText, Paper, Tab, Tabs, ThemeProvider, Typography } from "@mui/material";
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import { MyOuterTheme } from "../assets/MyTheme";
-import { LoopRounded, MenuBook } from "@mui/icons-material";
+import { Height, LoopRounded, MenuBook } from "@mui/icons-material";
 import MyData from "../database/MyData.json"
 import { motion } from "framer-motion"
 
@@ -28,7 +28,12 @@ const Intro = () => {
                             }}
                         >
                             <Box justifyContent={"center"} display={"flex"}>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRKgUUpHpc-JwcJiRLScAepL-T3oeaxR8T5A&usqp=CAU" />
+                                <img src="/images/Ashwin_photo.jpeg"
+                                    style={{
+                                        borderRadius: "15%",
+                                        height: "40Vh"
+                                    }}
+                                />
                             </Box>
                         </motion.div>
                     </Grid>
@@ -45,7 +50,7 @@ const Intro = () => {
                             >
                                 <Paper sx={{p:1}} >
                                     
-                                    <Typography variant="h6" component="blockquote">Hello, My name is Ashwin Prakash Koli. This portfolio is a representation of what I've Learned and accomplished as a MCA Graduate.</Typography>
+                                    <Typography variant="h6" component="blockquote">"Hello, My name is Ashwin Prakash Koli. This portfolio is a representation of what I've Learned and accomplished as a MCA Graduate."</Typography>
                                     
                                 </Paper>
                             </motion.div>
@@ -132,7 +137,7 @@ const Education = () => {
 
 const Intrests = () => {
     const Quotes = MyData.MyQuotes;
-    const [quote, setQuote] = useState(Quotes[0]);
+    const [quoteIndex, setQuoteIndex] = useState(0);
 
     return (
         <>
@@ -144,16 +149,17 @@ const Intrests = () => {
                         <Paper elevation={3} sx={{ minHeight: { xs: "40vh", sm: "40vh", lg: "30vh" } }}>
                             <Box borderBottom={1} display={"flex"}>
                                 <IconButton aria-label="Random Quote" onClick={() => {
-                                    setQuote(Quotes[Math.floor(Math.random() * Quotes.length)])
+                                    // setQuote(Quotes[Math.floor(Math.random() * Quotes.length)])
+                                    setQuoteIndex((quoteIndex+1) % Quotes.length)
                                 }}>
                                     <LoopRounded fontSize="small" />
                                 </IconButton>
                                 <Typography fontFamily={"monospace"} mx={1} pt={1} fontWeight={500} >Quotes/Philosophies I like :</Typography>
 
                             </Box>
-                            <Box p={2}>
+                            <Box p={2} >
                                 <Typography fontFamily={"monospace"} fontStyle={"oblique"}>
-                                    "{quote}"
+                                    "{Quotes[quoteIndex]}"
                                 </Typography>
                             </Box>
                         </Paper>

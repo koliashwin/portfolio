@@ -71,9 +71,9 @@ const Contact = () => {
                             opacity: [0, 1], y: [-50, 0]
                         }}
                     >
-                        <Grid item sm={12} md={5} justifyContent={"center"} textAlign={"center"}>
+                        <Grid item sm={12} md={6} justifyContent={"center"} textAlign={"center"}>
                             <Container display={"flex"} justifyContent={"center"}>
-                                <Typography>
+                                <Typography textAlign={"left"} mx={2}>
                                     Hey there, You can use following links to know about me more or to get in touch with me.
                                 </Typography>
                             </Container>
@@ -90,9 +90,6 @@ const Contact = () => {
                                 </Fab>
                                 <Fab color="primary" aria-label="LinkedIn" size="small" href="https://www.linkedin.com/in/ashwin-koli-84055a13a/">
                                     <LinkedIn />
-                                </Fab>
-                                <Fab color="primary" aria-label="Resume" size="small" href="https://drive.google.com/file/d/1SYLzWCSQDfkW2_PIk75Hz75_u1H7C3_H/view?usp=sharing">
-                                    <DocumentScanner />
                                 </Fab>
                             </Box>
                         </Grid>

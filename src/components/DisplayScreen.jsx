@@ -6,6 +6,7 @@ import Work from "./Work";
 import About from "./About";
 import Contact from "./Contact";
 import { QuickOptions } from "./QuickOptions";
+import Footer from "./Footer";
 
 const DisplayScreen = () => {
     return (
@@ -15,7 +16,8 @@ const DisplayScreen = () => {
             <div id="Skills"><Skills /></div>            
             <div id="Work"><Work /></div>
             <div id="About"><About /></div>
-            <div id="Contact"><Contact /></div>    
+            <div id="Contact"><Contact /></div>   
+            <Footer /> 
             <QuickOptions />     
         </>
     );
