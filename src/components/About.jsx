@@ -97,9 +97,9 @@ const Education = () => {
                                         opacity: [0, 1], x: [100, 0]
                                     }}
                                 >
-                                    <Box >
+                                    <Box pb={2}>
                                         <Typography variant="inherit" textAlign={"right"} sx={{ fontSize: { md: 32, sm: 22 } }}><strong>{edu.course}</strong></Typography>
-                                        <Typography textAlign={"right"} variant="subtitle1">({edu.university})</Typography>
+                                        {/* <Typography textAlign={"right"} variant="subtitle1">({edu.university})</Typography> */}
                                         <Divider />
                                     </Box>
                                 </motion.div>
@@ -119,9 +119,9 @@ const Education = () => {
                                 >
                                     <Box>
                                         <Typography variant="inherit" sx={{ fontSize: { md: 32, sm: 22 } }}><strong>{edu.institute}</strong></Typography>
-                                        <Divider />
-                                        <Typography variant="subtitle2">Passout : {edu.passout}</Typography>
-                                        <Typography variant="caption"><strong>CGPA or % : {edu.result}</strong></Typography>
+                                        {/* <Divider /> */}
+                                        {/* <Typography variant="subtitle2">Passout : {edu.passout}</Typography>
+                                        <Typography variant="caption"><strong>CGPA or % : {edu.result}</strong></Typography> */}
                                     </Box>
                                 </motion.div>
 
